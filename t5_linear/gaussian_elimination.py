@@ -1,13 +1,3 @@
-A = [
-    [5, 7, 6, 5],
-    [7, 10, 8, 7],
-    [6, 8, 10, 9],
-    [5, 7, 9, 10],
-]
-
-B = [23, 32, 33, 31]
-
-
 def gaussian_elimination(a: list, b: list) -> list:
     """Return X-vector resulting from Gaussian Elimination method"""
     a = [ai + [bi] for ai, bi in zip(a, b)]  # Concatenated matrix
@@ -44,4 +34,13 @@ def gaussian_elimination(a: list, b: list) -> list:
 
 
 if __name__ == '__main__':
+    A = [
+        [5, 7, 6, 5],
+        [7, 10, 8, 7],
+        [6, 8, 10, 9],
+        [5, 7, 9, 10],
+    ]
+
+    B = [23, 32, 33, 31]
+
     print(gaussian_elimination(A, B))
